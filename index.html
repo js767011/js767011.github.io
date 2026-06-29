@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob A Smith - Systems Engineer</title>
-    <!-- Tailwind CSS for rapid styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     
     <script>
@@ -40,7 +37,6 @@
 </head>
 <body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-light selection:text-white">
 
-    <!-- Navigation -->
     <nav class="fixed w-full bg-brand-dark/90 backdrop-blur-sm z-50 border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -59,7 +55,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <main class="pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <div class="text-left md:w-2/3">
             <p class="text-brand-light font-mono mb-4">Hello, I'm</p>
@@ -83,7 +78,6 @@
         </div>
     </main>
 
-    <!-- About Section -->
     <section id="about" class="py-16 bg-slate-900/50 border-y border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-2">
@@ -129,7 +123,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-2">
             <span class="text-brand-light font-mono">02.</span> Technical Arsenal
@@ -165,7 +158,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="py-16 bg-slate-900/50 border-y border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-2">
@@ -173,7 +165,25 @@
             </h3>
             
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1: CUDA Matrix -->
+                
+                <div class="bg-brand-card rounded-lg border border-slate-700 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <i class="fa-solid fa-image text-3xl text-brand-light"></i>
+                            <a href="https://github.com/js767011/CUDA---Accelerated-Image-Processor" target="_blank" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">CUDA-Accelerated Image Processor</h4>
+                        <p class="text-slate-400 text-sm mb-4">
+                            Engineered a high-performance C++ image processing application for massive datasets. Bypassed standard I/O by utilizing pointer casting to map 124MB+ raw binary PPM files directly into dynamically allocated 1D heap memory, explicitly architected for an upcoming parallelized CUDA port.
+                        </p>
+                        <ul class="flex flex-wrap gap-2 text-xs font-mono">
+                            <li class="bg-brand-dark text-brand-light px-2 py-1 rounded">C++</li>
+                            <li class="bg-brand-dark text-brand-light px-2 py-1 rounded">CUDA</li>
+                            <li class="bg-brand-dark text-brand-light px-2 py-1 rounded">Memory Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="bg-brand-card rounded-lg border border-slate-700 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -192,7 +202,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2: CUDA Stencil -->
                 <div class="bg-brand-card rounded-lg border border-slate-700 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -210,27 +219,7 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Project 3: GIOS Placeholder -->
-                <div class="bg-brand-card rounded-lg border border-slate-700 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <i class="fa-solid fa-network-wired text-3xl text-brand-light"></i>
-                            <a href="#" class="text-slate-400 hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-2">Multi-Threaded Web Server (C)</h4>
-                        <p class="text-slate-400 text-sm mb-4">
-                            [GIOS Project Placeholder] Designed and implemented a robust, multi-threaded web server in C utilizing POSIX threads (pthreads). Engineered a thread-safe boss/worker queue architecture utilizing mutexes and condition variables to handle concurrent network requests without race conditions or deadlocks.
-                        </p>
-                        <ul class="flex flex-wrap gap-2 text-xs font-mono">
-                            <li class="bg-brand-dark text-brand-light px-2 py-1 rounded">C</li>
-                            <li class="bg-brand-dark text-brand-light px-2 py-1 rounded">Pthreads</li>
-                            <li class="bg-brand-dark text-brand-light px-2 py-1 rounded">Sockets / IPC</li>
-                        </ul>
-                    </div>
-                </div>
                 
-                <!-- Project 4: Custom Vector -->
                 <div class="bg-brand-card rounded-lg border border-slate-700 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-4">
@@ -253,7 +242,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h3 class="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
             <span class="text-brand-light font-mono">04.</span> What's Next?
@@ -267,7 +255,6 @@
         </a>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800 py-8 text-center">
         <div class="flex justify-center gap-6 mb-4">
             <a href="https://github.com/js767011" target="_blank" class="text-slate-400 hover:text-white transition-colors text-2xl">
